@@ -1,0 +1,418 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #4CAF50;
+    --bg-light: #f4f4f4;
+    --text-color: #555;
+    --heading-color: #222;
+}
+
+/* Base et typographie */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: var(--text-color);
+    /* Assure que la boîte de contenu inclut le padding et la bordure */
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+/* En-tête et navigation */
+.header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    margin-left: 1.5rem;
+}
+
+.menu-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu-list a:hover {
+    color: var(--secondary-color);
+}
+
+/* Sections communes */
+.section-padding {
+    padding: 4rem 1rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--heading-color);
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+/* Section Héro */
+.hero-section {
+    background: url('https://via.placeholder.com/1500x800/333/fff?text=Photo+de+fond+professionnelle') no-repeat center center/cover;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    margin-right: 2rem;
+}
+
+.hero-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary-color);
+}
+
+.hero-text {
+    flex: 2;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: #45a049;
+}
+
+/* Grille de compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.skill-category {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-item p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+.skill-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.skill-level {
+    background-color: var(--secondary-color);
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.skill-mention {
+    display: block;
+    font-size: 0.9em;
+    color: #888;
+    text-align: right;
+    margin-top: 0.2rem;
+}
+
+/* Grille de projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.project-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Nouvelle section Compétences Personnelles */
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.skill-item {
+    padding: 1.5rem 1rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.skill-item h3 {
+    margin: 0;
+    color: var(--heading-color);
+    font-size: 1.1rem;
+}
+
+/* CV Download */
+.cv-download {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Formulaire de contact */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* S'assure que le padding ne fait pas déborder l'élément */
+}
+
+/* Pied de page et icônes */
+.footer {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.social-icons {
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 0.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+/* Responsive Design (Mobile) */
+/* C'est la partie la plus importante pour l'affichage sur téléphone */
+@media (max-width: 768px) {
+    /* Ajustement de l'en-tête et du menu */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .logo {
+        margin-bottom: 1rem;
+    }
+    .nav-menu {
+        width: 100%;
+    }
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .menu-list.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        align-self: flex-end; /* Alignement à droite de l'icône du menu */
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    .menu-list li {
+        margin: 0;
+        border-top: 1px solid #444;
+        width: 100%;
+    }
+    .menu-list a {
+        display: block;
+        padding: 1rem;
+    }
+
+    /* Ajustement de la section "Hero" */
+    .hero-content-wrapper {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    .hero-image {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    /* Les grilles s'empilent pour ne pas dépasser */
+    .skills-grid, .projects-grid, .soft-skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustement de la taille de police pour les titres */
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Assurer que les images ne dépassent pas */
+    .project-card img {
+        max-width: 100%;
+    }
+    
+    /* Éléments de formulaire pleins */
+    .form-group input, .form-group textarea {
+        width: 100%;
+    }
+}
